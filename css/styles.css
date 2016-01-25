@@ -10,6 +10,7 @@ a:hover {
   text-decoration: none;
 }
 .wrapper {
+  min-width: 320px;
   background: #fff url("../images/body-bg-angle-top.png") 0 0 no-repeat;
   border-color: #ccc;
   border-style: solid;
@@ -130,8 +131,7 @@ nav ul li .inner-nav .sub-menu-arrow {
 nav ul li .inner-nav ul {
   background-color: rgba(255, 255, 255, 0.4);
   padding: 0 0 14px;
-  font-size: 17px;
-  line-height: 24px;
+  font: 17px/24px 'Ubuntu', sans-serif;
 }
 nav ul li .inner-nav ul:before {
   content: '';
@@ -181,12 +181,13 @@ nav ul li:nth-of-type(5):hover {
 }
 .social {
   float: right;
-  margin: 17px 29px 0 0;
+  margin: 17px 30px 0 0;
 }
 .social li {
   display: inline-block;
   width: 32px;
   height: 32px;
+  margin-left: -2px;
 }
 .social li a {
   background: url("../images/social.png") 0 -2px no-repeat;
@@ -200,6 +201,7 @@ nav ul li:nth-of-type(5):hover {
 .jcarousel-wrapper {
   position: relative;
   clear: both;
+  margin-bottom: 3px;
 }
 .jcarousel-wrapper .jcarousel {
   position: relative;
@@ -226,7 +228,7 @@ nav ul li:nth-of-type(5):hover {
 }
 .jcarousel-control {
   position: absolute;
-  bottom: 24px;
+  bottom: 22px;
   right: 27px;
 }
 .jcarousel-prev,
@@ -244,7 +246,7 @@ nav ul li:nth-of-type(5):hover {
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-.aktuel {
+.aktuell {
   float: left;
   width: 303px;
   padding-left: 31px;
@@ -254,14 +256,21 @@ nav ul li:nth-of-type(5):hover {
   font-family: 'Ubuntu', sans-serif;
   color: #666;
 }
-.aktuel .heading-hr {
+.aktuell li {
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0 14px 0;
+}
+.aktuell li:last-of-type {
+  border: none;
+}
+.aktuell .heading-hr {
   background-color: #ffe190;
   height: 3px;
   width: 100%;
-  margin: 40px 0 18px;
+  margin: 40px 0 6px;
   position: relative;
 }
-.aktuel .heading-hr h2 {
+.aktuell .heading-hr h2 {
   color: #ffe7aa;
   font: bold 25px/30px 'Unkempt', cursive;
   background-color: #fff;
@@ -270,37 +279,26 @@ nav ul li:nth-of-type(5):hover {
   top: -18px;
   left: 0;
 }
-.aktuel .title {
-  font-weight: bold;
+.aktuell .title {
+  font-weight: 500;
   font-size: 17px;
-  line-height: 27px;
+  line-height: 20px;
 }
-.aktuel .description {
-  font-size: 12px;
-  line-height: 16px;
+.aktuell .description {
+  font-size: 11px;
+  line-height: 18px;
 }
-.aktuel .link {
+.aktuell .link {
   color: #8a0026;
   font-size: 12px;
   font-weight: bold;
 }
-.aktuel .hr-separate {
-  background-color: #ccc;
-  width: 100%;
-  height: 1px;
-  margin: 14px 0 12px;
-}
 .products-section {
-  padding: 37px 0 0 30px;
+  padding: 37px 0 0 31px;
   overflow: hidden;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-}
-.products-section ul {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
 }
 .products-section ul li {
   width: 191px;
@@ -314,7 +312,7 @@ nav ul li:nth-of-type(5):hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 4px;
+  height: 110px;
 }
 .products-section ul li .descr {
   font: 18px/38px 'Ubuntu', sans-serif;
@@ -338,6 +336,8 @@ nav ul li:nth-of-type(5):hover {
 .products-section ul li .descr .name {
   z-index: 4;
   position: relative;
+  font-weight: 500;
+  line-height: 33px;
 }
 .products-section ul li .descr img {
   width: 100%;
@@ -366,7 +366,7 @@ nav ul li:nth-of-type(5):hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   background: #f2f2f2 url("../images/butterfly.png") 97% 11px no-repeat;
-  font: bold 14px/21px 'Ubuntu', sans-serif;
+  font: 500 14px/21px 'Ubuntu', sans-serif;
 }
 .quotes-section:after {
   content: '';
@@ -374,9 +374,7 @@ nav ul li:nth-of-type(5):hover {
   clear: both;
 }
 .quotes-section .sponsor {
-  width: 188px;
-  height: 104px;
-  margin: 49px 0 27px 44px;
+  margin: 49px 0 0 44px;
   float: left;
   position: relative;
 }
@@ -389,12 +387,29 @@ nav ul li:nth-of-type(5):hover {
   right: 0;
   z-index: 13;
 }
+.quotes-section .sponsor .sponsors-text {
+  height: 28px;
+  width: 161px;
+}
+.quotes-section .sponsor .sponsors-text img {
+  height: auto;
+  width: 161px;
+}
+.quotes-section .sponsor .sponsors-logo {
+  height: 62px;
+  width: 70px;
+  margin: 11px auto;
+}
+.quotes-section .sponsor .sponsors-logo img {
+  height: auto;
+  width: 70px;
+}
 .quotes-section .quotes-block {
   position: relative;
   font-style: italic;
   width: 450px;
   padding: 17px 14px 16px 20px;
-  margin: 19px 10% 13px 0;
+  margin: 19px 118px 13px 0;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -436,7 +451,7 @@ nav ul li:nth-of-type(5):hover {
 }
 .quotes-section .autor {
   float: right;
-  margin-right: 11%;
+  margin-right: 163px;
 }
 footer {
   font-size: 12px;
@@ -479,62 +494,136 @@ footer .copyright {
   }
   .wrapper,
   footer {
-    width: 100%;
+    width: 768px;
     z-index: 3;
   }
   .wrapper {
-    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0 auto;
     border-radius: 0;
     box-shadow: none;
-    border: none;
+    border-width: 0 1px;
   }
   .wrapper .angle {
     opacity: .5;
     z-index: 2;
-    bottom: -115px;
+    bottom: -81px;
+  }
+  #logo {
+    width: 296px;
+    height: 81px;
+    margin: 25px 7px 0 0;
+  }
+  .social {
+    margin: 10px 10px 0 0;
+  }
+  nav {
+    margin-top: -8px;
+  }
+  nav li {
+    padding: 7px 23px 0;
+  }
+  .jcarousel-wrapper {
+    margin-bottom: 0;
+  }
+  .jcarousel-wrapper .jcarousel {
+    height: 375px;
+  }
+  .jcarousel-control {
+    bottom: 14px;
+    right: 9px;
   }
   .products-section {
-    padding: 15px;
+    padding: 14px 0px 0 11px;
   }
   .products-section ul li {
-    width: 45%;
+    width: 236px;
+    margin: 0 15px 16px 0;
+    height: 179px;
   }
-  .aktuel {
+  .products-section ul li:nth-child(3n) {
+    margin-right: 0;
+  }
+  .products-section ul li .descr {
+    height: 44px;
+  }
+  .products-section ul li .descr img {
+    height: 44px;
+  }
+  .products-section ul li .descr .name {
+    line-height: 52px;
+  }
+  .products-section ul li .image {
+    height: 135px;
+  }
+  .products-section ul li .image img {
+    height: 122px;
+  }
+  .aktuell {
     width: 100%;
     padding: 0 15px;
   }
-  .aktuel ul {
+  .aktuell ul {
     border-bottom: 1px solid #ccc;
-    padding: 10px 0;
+    padding: 10px 0 3px;
   }
-  .aktuel ul li {
+  .aktuell ul li {
     width: 32%;
     display: inline-block;
+    border: none;
   }
-  .aktuel ul li .title {
+  .aktuell ul li .title {
     line-height: 17px;
+    height: 39px;
   }
-  .aktuel .heading-hr {
-    width: 303px;
+  .aktuell .heading-hr {
+    width: 272px;
+    margin: 24px 0 -4px;
   }
-  .aktuel .hr-separate {
+  .aktuell .hr-separate {
     display: none;
   }
+  .quotes-section {
+    margin: 15px 9px 0 11px;
+  }
   .quotes-section .quotes-block {
-    width: 350px;
+    width: 451px;
+    margin: 19px 76px 13px 0;
+    padding-bottom: 18px;
   }
-}
-@media screen and (max-width: 780px) {
-  .social {
-    margin-right: 4px;
+  .quotes-section .sponsor {
+    margin: 42px 0 27px 11px;
   }
-  nav ul li {
-    padding: 7px 10px 0;
+  .quotes-section .autor {
+    margin-right: 122px;
+    margin-bottom: 7px;
+  }
+  footer {
+    border-color: #ccc;
+    border-style: solid;
+    border-width: 0 1px;
+    padding: 55px 2px 8px 11px;
+    margin: 0 auto;
+  }
+  footer .copyright {
+    float: right;
+    width: 180px;
+    margin-top: -19px;
+    margin-right: 12px;
   }
 }
 @media screen and (max-width: 768px) {
+  .wrapper,
+  footer {
+    width: 600px;
+  }
+  #logo {
+    margin-right: 4px;
+  }
   .quotes-section {
-    background-image: none;
+    background-position-x: 99%;
   }
   .quotes-section .sponsor {
     margin-left: 15px;
@@ -549,57 +638,17 @@ footer .copyright {
   .quotes-section .autor {
     margin-right: 3%;
   }
-}
-@media screen and (max-width: 600px) {
-  #logo {
-    width: 241px;
-    margin: 50px 2px 0 0;
-  }
-  .social {
-    display: none;
-  }
-  .products-section {
-    padding: 15px;
-  }
-  .products-section ul li {
-    width: 90%;
-    margin-right: 0;
-  }
-  .aktuel ul {
-    border: none;
-  }
-  .aktuel ul li {
-    width: 45%;
-    padding: 15px 0;
-    border-bottom: 1px solid #ccc;
-  }
-  .social {
-    display: none;
-  }
-  .quotes-section {
-    margin-bottom: 3px;
-  }
-  .quotes-section .sponsor {
-    width: 20%;
-    margin-left: 4px;
-  }
-  .quotes-section .quotes-block {
-    width: 75%;
-  }
-  .quotes-section .autor {
-    text-align: center;
-  }
   nav {
     width: 100%;
   }
   nav ul {
     background-color: #8cc445;
     border-top: 1px solid #72a335;
-    font: bold 24px/24px 'Ubuntu', sans-serif;
+    font: bold 24px/17px 'Ubuntu', sans-serif;
     text-transform: uppercase;
     text-shadow: 1px 2px 1px #969696;
     padding: 0;
-    margin-top: 15px;
+    margin-top: 11px;
   }
   nav ul li {
     padding: 15px 0 15px 53px;
@@ -633,16 +682,16 @@ footer .copyright {
   nav ul li:first-of-type:before,
   nav ul li.more:before {
     content: '';
-    background: url("../images/menu.png") no-repeat 0 -40px;
-    width: 24px;
-    height: 24px;
+    background: url("../images/menu.png") no-repeat 0 0;
+    width: 26px;
+    height: 26px;
     display: block;
     position: absolute;
     left: 11px;
     top: 11px;
   }
   nav ul li.more:before {
-    background-position: 0 -2px;
+    background-position: 0 -29px;
   }
   nav ul li .inner-nav {
     display: block;
@@ -687,49 +736,190 @@ footer .copyright {
     text-transform: uppercase;
     text-shadow: 1px 2px 1px #969696;
   }
+  .social {
+    display: none;
+  }
+  .jcarousel-wrapper {
+    margin-bottom: 0;
+  }
+  .jcarousel-wrapper .jcarousel {
+    height: 294px;
+  }
+  .aktuell {
+    padding: 0 6px;
+  }
+  .aktuell .heading-hr {
+    margin-top: 29px;
+  }
+  .aktuell ul {
+    padding-top: 8px;
+    border: none;
+  }
+  .aktuell ul li {
+    width: 271px;
+    margin-right: 27px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 16px;
+  }
+  .aktuell ul li:nth-child(2n) {
+    margin-right: 0;
+  }
+  .aktuell ul li:last-of-type {
+    border-bottom: 1px solid #ccc;
+  }
+  .aktuell ul li .title {
+    height: 20px;
+  }
+  .products-section {
+    padding: 11px 0 0 4px;
+  }
+  .products-section ul li {
+    width: 282px;
+    margin: 0 17px 19px 0;
+    height: 214px;
+  }
+  .products-section ul li:nth-child(3n) {
+    margin-right: 17px;
+  }
+  .products-section ul li:nth-child(2n) {
+    margin-right: 0;
+  }
+  .products-section ul li .descr {
+    height: 54px;
+  }
+  .products-section ul li .descr img {
+    height: 54px;
+  }
+  .products-section ul li .descr .name {
+    line-height: 64px;
+    font-size: 22px;
+  }
+  .products-section ul li .image {
+    height: 161px;
+  }
+  .quotes-section {
+    margin: -1px 5px 0 4px;
+  }
+  .quotes-section .sponsor {
+    margin-left: 6px;
+    margin-top: 49px;
+  }
+  .quotes-section .sponsor .sponsors-text img {
+    width: 108px;
+  }
+  .quotes-section .sponsor .sponsors-logo {
+    margin: 1px 0 0 22px;
+    height: 62px;
+    width: 70px;
+  }
+  .quotes-section .sponsor .sponsors-logo img {
+    height: auto;
+    width: 70px;
+  }
+  .quotes-section .quotes-block {
+    width: 429px;
+    margin: 18px 18px 13px 0;
+    padding: 11px 14px 3px 22px;
+  }
+  .quotes-section .quotes-block:after {
+    right: -6px;
+  }
+  .quotes-section .autor {
+    margin-right: 71px;
+  }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 600px) {
+  .wrapper,
+  footer {
+    width: 100%;
+  }
+  .wrapper .angle {
+    margin-right: -1px;
+    background-image: none;
+    border-right: 1px solid #ccc;
+  }
+  #logo {
+    width: 222px;
+    margin: 40px 5px 0 0;
+  }
+  nav {
+    margin-top: -22px;
+  }
   .jcarousel-wrapper {
     display: none;
   }
-  footer {
-    font-size: 11px;
-    line-height: 18px;
+  .aktuell {
+    padding: 0 10px;
   }
-  footer .copyright {
-    float: none;
-    margin: 0 auto;
-    padding-top: 25px;
+  .aktuell ul {
+    padding-bottom: 0;
+  }
+  .aktuell ul li {
+    width: 100%;
+    margin-right: 0;
+  }
+  .products-section {
+    padding: 15px;
+  }
+  .products-section ul li {
+    width: 100%;
+    margin-right: 0;
+  }
+  .products-section ul li .image img {
+    height: 151px;
   }
   .quotes-section {
-    margin-bottom: 3px;
+    background-image: none;
+    padding: 0 3px 7px;
+    margin: -12px 0 3px;
     font-size: 11px;
     line-height: 18px;
+    border-radius: 0;
+    border-width: 3px 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    width: 100%;
   }
   .quotes-section .sponsor {
-    width: 80%;
+    width: 100%;
     margin: 13px auto;
     float: inherit;
   }
+  .quotes-section .sponsor .sponsors-text,
+  .quotes-section .sponsor .sponsors-logo {
+    margin: 0 auto;
+  }
+  .quotes-section .sponsor .sponsors-text img,
+  .quotes-section .sponsor .sponsors-logo img {
+    margin: 0 auto;
+    display: block;
+  }
   .quotes-section .quotes-block {
-    width: 90%;
+    width: 100%;
+    margin: -12px 0 8px;
+    box-sizing: border-box;
+    padding: 17px 12px 11px 7px;
   }
   .quotes-section .quotes-block:after {
-    right: -2px;
+    right: 6px;
   }
-  .aktuel {
-    padding: 0 5px;
+  .quotes-section .quotes-block:before {
+    top: -13px;
+    left: -4px;
   }
-  .aktuel .heading-hr {
-    margin-bottom: 5px;
+  .quotes-section .autor {
+    display: none;
   }
-  .aktuel ul {
-    padding-top: 0;
+  footer {
+    padding: 13px 0 0 0;
   }
-  .aktuel ul li {
-    width: 100%;
+  footer ul {
+    float: initial;
+    text-align: center;
   }
-  .aktuel .heading-hr {
-    width: 100%;
+  footer .copyright {
+    clear: both;
+    margin: 11px auto;
+    float: none;
   }
 }

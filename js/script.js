@@ -2,11 +2,13 @@ $(function() {
     function initJcasrousel(){
         $('.jcarousel').jcarousel({
             wrap: 'circular'
-        }).on('jcarousel:reload jcarousel:create', function () {
+        })
+            .on('jcarousel:reload jcarousel:create', function () {
             var carousel = $(this),
                 width = carousel.innerWidth();
             carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
-        }).jcarouselAutoscroll({
+        })
+            .jcarouselAutoscroll({
             interval: 8000,
             target: '+=1',
             autostart: true
@@ -28,6 +30,6 @@ $(function() {
     });
     $('.menu').click(function(){
         $(this).siblings('li').toggleClass('display-none');
-        $(this).toogleClass('hide-submenu');
+        $(this).toggleClass('hide-submenu');
     })
 });
